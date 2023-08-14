@@ -1,53 +1,3 @@
-// 'use client';
-
-// import { useRouter, useSearchParams } from 'next/navigation';
-// import { FormEvent, useEffect, useState } from 'react';
-
-// import { createUrl } from '@/components/utils';
-// import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-
-// export default function Search() {
-// 	const router = useRouter();
-// 	const searchParams = useSearchParams();
-// 	const [searchValue, setSearchValue] = useState('');
-
-// 	useEffect(() => {
-// 		setSearchValue(searchParams?.get('q') || '');
-// 	}, [searchParams, setSearchValue]);
-
-// 	function onSubmit(e: FormEvent<HTMLFormElement>) {
-// 		e.preventDefault();
-
-// 		const val = e.target as HTMLFormElement;
-// 		const search = val.search as HTMLInputElement;
-// 		const newParams = new URLSearchParams(searchParams.toString());
-
-// 		if (search.value) {
-// 			newParams.set('q', search.value);
-// 		} else {
-// 			newParams.delete('q');
-// 		}
-
-// 		router.push(createUrl('/search', newParams));
-// 	}
-
-// 	return (
-// 		<form onSubmit={onSubmit} className="w-max-[550px] relative w-full lg:w-80 xl:w-full">
-// 			<input
-// 				type="text"
-// 				name="search"
-// 				placeholder="Search for products..."
-// 				autoComplete="off"
-// 				value={searchValue}
-// 				onChange={e => setSearchValue(e.target.value)}
-// 				className="w-full rounded-lg border bg-white px-4 py-2 text-sm text-black placeholder:text-neutral-500 dark:border-neutral-800 dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
-// 			/>
-// 			<div className="absolute right-0 top-0 mr-3 flex h-full items-center">
-// 				<MagnifyingGlassIcon className="h-4" />
-// 			</div>
-// 		</form>
-// 	);
-// }
 'use client';
 
 // import Price from 'components/price';
@@ -110,25 +60,22 @@ export default function SearchModal({ cart }: { cart: null | undefined }) {
 						leaveTo="opacity-0 scale-95">
 						<div className="fixed inset-0">
 							<div className="flex min-h-full items-center justify-center p-4 text-center">
-								<Dialog.Panel className="h-[66vh] w-2/3 transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+								<Dialog.Panel className="flex h-[66vh] w-2/3 transform flex-col rounded-xl bg-transparent text-left align-middle transition-all">
 									{/* <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
 										Payment successful
 									</Dialog.Title> */}
-									<Input type="email" label="Email" className="border-b border-gray-200 pb-4" />
-									<div className="response-list h-full space-y-4 overflow-auto pt-4">
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
-										<div className="flex h-24 w-full rounded-xl bg-gray-200">1</div>
+									<Input type="email" label="Email" className="mb-4 rounded-xl bg-white p-4 pb-4" />
+									<div className="flex-1 overflow-auto rounded-xl bg-white py-6 pl-4 pr-2">
+										<div className="response-list h-full space-y-4 overflow-auto rounded-xl px-2 pt-2">
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+											<div className="flex h-24 w-full rounded-xl bg-gray-100">1</div>
+										</div>
 									</div>
 
 									{/* <div className="mt-2">

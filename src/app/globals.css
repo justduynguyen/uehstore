@@ -21,3 +21,24 @@ body {
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #fff0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #db82a7;
+	padding-top: 0.5rem;
+	border-radius: 0.75rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
