@@ -65,6 +65,7 @@ import Logo from '@/components/layout/logo';
 import { Link } from '@nextui-org/link';
 import { Navbar as NavNextUI, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/navbar';
 import { Suspense } from 'react';
+import SearchModal from './search/search-modal';
 export default function Navbar() {
 	// const menu = await getMenu('next-js-frontend-header-menu');
 
@@ -80,7 +81,7 @@ export default function Navbar() {
 					</NavbarBrand>
 					<NavbarContent className="hidden gap-4 sm:flex" justify="center">
 						<NavbarItem>
-							<div className="bg-gray-300">{/* <Search /> */}Search</div>
+							<SearchModal cart={null} />
 							{/* <Link color="foreground" href="#">
 						Features
 					</Link> */}
