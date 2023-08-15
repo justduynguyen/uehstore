@@ -48,3 +48,7 @@ body {
 		3px 1px 17px 0 rgb(203 199 199 / 50%),
 		3px 5px 10px 0 rgb(157 157 157 / 12%);
 }
+
+input[type='text'] {
+	font-size: inherit;
+}
