@@ -1,16 +1,6 @@
 import Price from './price';
 
-const Label = ({
-	title,
-	amount,
-	currencyCode,
-	position = 'bottom',
-}: {
-	title: string;
-	amount: string;
-	currencyCode: string;
-	position?: 'bottom' | 'center';
-}) => {
+const Label = ({ title, amount, currencyCode }: { title: string; amount: string; currencyCode: string; position?: 'bottom' | 'center' }) => {
 	return (
 		<div className="flex w-full md:px-4 md:pb-4">
 			<div className="flex items-center rounded-full border bg-white/70 text-xs font-semibold text-black backdrop-blur-md dark:border-neutral-800 dark:bg-black/70 dark:text-white md:p-1">

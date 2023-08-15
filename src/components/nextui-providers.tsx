@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 export function NextUIProviders({ children }: { children: ReactNode }) {
 	return (
 		<NextUIProvider>
-			<main className="text-foreground bg-background">{children}</main>
+			<main className="bg-background text-foreground">{children}</main>
 		</NextUIProvider>
 	);
 }

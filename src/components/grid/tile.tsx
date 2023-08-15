@@ -5,8 +5,6 @@ import { ComponentProps } from 'react';
 
 export function GridTileImage({
 	isInteractive = true,
-	active,
-	label,
 	...props
 }: {
 	isInteractive?: boolean;

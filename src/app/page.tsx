@@ -7,7 +7,6 @@ export const runtime = 'edge';
 export const metadata = {
 	title: 'Home page',
 	description: 'Home page description',
-	viewport: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no',
 };
 
 export default async function HomePage() {

@@ -11,7 +11,6 @@ import type { ListItem, PathFilterItem } from '.';
 // eslint-disable-next-line no-redeclare
 function PathFilterItem({ item }: { item: PathFilterItem }) {
 	const pathname = usePathname();
-	const searchParams = useSearchParams();
 	const active = pathname === item.path;
 	const newParams = new URLSearchParams('searchParams.toString()');
 	const DynamicTag = active ? 'p' : Link;
