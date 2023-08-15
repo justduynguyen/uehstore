@@ -79,24 +79,12 @@ export default function Navbar() {
 							<div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">{'SITE_NAME'}</div>
 						</Link>
 					</NavbarBrand>
-					<NavbarContent className="hidden gap-4 sm:flex" justify="center">
+					<SearchModal />
+					{/* <NavbarContent className="flex w-full flex-1 gap-4" justify="center">
 						<NavbarItem>
-							<SearchModal cart={null} />
-							{/* <Link color="foreground" href="#">
-						Features
-					</Link> */}
+							<SearchModal />
 						</NavbarItem>
-						{/* <NavbarItem isActive>
-					<Link href="#" aria-current="page">
-						Customers
-					</Link>
-				</NavbarItem>
-				<NavbarItem>
-					<Link color="foreground" href="#">
-						Integrations
-					</Link>
-				</NavbarItem> */}
-					</NavbarContent>
+					</NavbarContent> */}
 					<NavbarContent justify="end">
 						<NavbarItem className="flex">
 							<Suspense fallback={<OpenCart />}>
