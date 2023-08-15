@@ -3,6 +3,7 @@ import Navbar from '@/components/layout/navbar';
 import { NextUIProviders } from '@/components/nextui-providers';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import { ReactNode, Suspense } from 'react';
 import './globals.css';
 
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="en" className={inter.className}>
+			<Script src="/custom.js"></Script>
 			<body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
 				<NextUIProviders>
 					<Navbar />
