@@ -32,7 +32,7 @@ export default function SearchModal() {
 				<div className="w-full text-neutral-400">Input...</div>
 				<OpenSearch />
 			</button>
-			<Transition as={Fragment} show={isOpen} leave="transform duration-[200ms] transition">
+			<Transition show={isOpen} leave="transform duration-[0ms] transition">
 				<Dialog onClose={closeSearch} className="relative z-50">
 					<Transition.Child
 						as={Fragment}
@@ -44,34 +44,27 @@ export default function SearchModal() {
 						leaveTo="opacity-0 backdrop-blur-none">
 						<div className="fixed inset-0 bg-black/30" aria-hidden="true" />
 					</Transition.Child>
-					<Transition.Child
-						as={Fragment}
-						enter="ease-out duration-300"
-						enterFrom="opacity-0 scale-95"
-						enterTo="opacity-100 scale-100"
-						leave="ease-in duration-200"
-						leaveFrom="opacity-100 scale-100"
-						leaveTo="opacity-0 scale-95">
+					{isOpen && (
 						<div className="fixed inset-0">
 							<div className="flex min-h-full items-center justify-center p-4 text-center">
-								<Dialog.Panel className="flex h-[66vh] w-2/3 transform flex-col rounded-xl bg-transparent text-left align-middle transition-all">
+								<Dialog.Panel className="flex h-[60vh] w-11/12 transform flex-col overflow-hidden rounded-xl bg-white text-left align-middle transition-all">
 									<Input
 										autoFocus
 										type="text"
 										label="Nhập tìm kiếm..."
-										className="mb-4 rounded-xl bg-white p-4 pb-4"
+										className="p-4"
 										value={textSearch}
 										onChange={e => setTextSearch(e.target.value)}
 									/>
-									<div className="flex-1 overflow-auto rounded-xl bg-white py-6 pl-4 pr-2">
-										<div className="response-list h-full space-y-4 overflow-auto rounded-xl px-2 pt-2">
+									<div className="flex-1 overflow-auto border-t p-4">
+										<div className="response-list h-full space-y-4 overflow-auto rounded-xl">
 											{textSearch.length ? textSearch : <NoData />}
 										</div>
 									</div>
 								</Dialog.Panel>
 							</div>
 						</div>
-					</Transition.Child>
+					)}
 				</Dialog>
 			</Transition>
 		</div>

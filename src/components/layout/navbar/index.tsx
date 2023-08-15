@@ -59,33 +59,40 @@
 // import MobileMenu from './mobile-menu';
 // import Search from './search';
 // const { SITE_NAME } = process.env;
+
+'use client';
 import Cart from '@/components/cart';
 import OpenCart from '@/components/cart/open-cart';
 import Logo from '@/components/layout/logo';
 import { Link } from '@nextui-org/link';
-import { Navbar as NavNextUI, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/navbar';
-import { Suspense } from 'react';
+import { Navbar as NavNextUI, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar';
+import { Suspense, useState } from 'react';
 import SearchModal from './search/search-modal';
 export default function Navbar() {
 	// const menu = await getMenu('next-js-frontend-header-menu');
-
+	const menuItems = ['Profile', 'Dashboard', 'Activity', 'Analytics', 'System', 'Deployments', 'My Settings', 'Team Settings', 'Help & Feedback', 'Log Out'];
+	// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	return (
 		<NavNextUI shouldHideOnScroll isBordered maxWidth="full">
-			<div className="flex w-full justify-center">
+			<div className="flex w-full">
 				<div className="flex w-[1240px]">
-					<NavbarBrand>
-						<Link href="/" className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6">
+					<NavbarContent>
+						<NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} className="sm:hidden" />
+						<NavbarBrand>
+							{/* <Link href="/" className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"> */}
 							<Logo />
-							<div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">{'SITE_NAME'}</div>
-						</Link>
-					</NavbarBrand>
-					<SearchModal />
+							{/* <div className="ml-2 flex-none text-sm font-medium uppercase md:hidden lg:block">{'SITE_NAME'}</div> */}
+							{/* </Link> */}
+						</NavbarBrand>
+					</NavbarContent>
 					{/* <NavbarContent className="flex w-full flex-1 gap-4" justify="center">
 						<NavbarItem>
 							<SearchModal />
 						</NavbarItem>
 					</NavbarContent> */}
 					<NavbarContent justify="end">
+						<SearchModal />
 						<NavbarItem className="flex">
 							<Suspense fallback={<OpenCart />}>
 								<Cart />
@@ -97,6 +104,19 @@ export default function Navbar() {
 					</Button>
 				</NavbarItem> */}
 					</NavbarContent>
+					<NavbarMenu>
+						{menuItems.map((item, index) => (
+							<NavbarMenuItem key={`${item}-${index}`}>
+								<Link
+									color={index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'}
+									className="w-full"
+									href="#"
+									size="lg">
+									{item}
+								</Link>
+							</NavbarMenuItem>
+						))}
+					</NavbarMenu>
 				</div>
 			</div>
 		</NavNextUI>

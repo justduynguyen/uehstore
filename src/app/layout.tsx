@@ -1,7 +1,6 @@
+import HomePageHead from '@/components/layout/home-page-head';
 import Navbar from '@/components/layout/navbar';
 import { NextUIProviders } from '@/components/nextui-providers';
-import Collections from '@/components/search/collections';
-import FilterList from '@/components/search/filter';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ReactNode, Suspense } from 'react';
@@ -20,24 +19,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<body className="bg-neutral-50 text-black selection:bg-teal-300 dark:bg-neutral-900 dark:text-white dark:selection:bg-pink-500 dark:selection:text-white">
 				<NextUIProviders>
 					<Navbar />
-					{/* <Suspense> */}
-					{/* <main>{children}</main> */}
-					{/* </Suspense> */}
 					<Suspense>
-						<div className="flex w-full justify-center pt-16">
-							<div className="flex w-[1240px]">
-								<div className="flex w-full flex-col gap-8 pb-4 text-black dark:text-white md:flex-row">
-									<div className="order-first w-full flex-none md:max-w-[125px]">
-										<Collections />
-									</div>
+						<div className="flex flex-col justify-center bg-neutral-50">
+							<HomePageHead />
+							<div className="flex max-w-[1240px] p-4">
+								<div className="flex w-full flex-col gap-4 text-black">
 									<div className="order-last min-h-screen w-full md:order-none">{children}</div>
-									<div className="order-none flex-none md:order-last md:w-[125px]">
-										<FilterList list={[]} title="Sort by" display="end" />
-									</div>
 								</div>
 							</div>
 						</div>
-						{/* <Footer /> */}
 					</Suspense>
 				</NextUIProviders>
 			</body>

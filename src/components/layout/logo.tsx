@@ -1,7 +1,7 @@
 const Logo = () => {
 	return (
 		<div className="logo">
-			<div className="text-4xl font-semibold">Logo</div>
+			<div className="text-xl font-semibold md:text-3xl">Logo</div>
 		</div>
 	);
 };
