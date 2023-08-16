@@ -15,7 +15,7 @@ export default async function HomePage() {
 	return (
 		<>
 			{products.length > 0 ? (
-				<Grid className="grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
+				<Grid className="grid-cols-2 p-2 pt-0 sm:grid-cols-2 lg:grid-cols-3">
 					<ProductGridItems products={products} />
 				</Grid>
 			) : null}
