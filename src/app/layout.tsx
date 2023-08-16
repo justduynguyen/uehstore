@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang="en" className={pacifico.className}>
 			<body className="touch-pan-y bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 text-black selection:bg-teal-300">
 				<NextUIProviders>
-					<div className="relative h-screen">
+					<div className="relative flex h-screen flex-col">
 						<Navbar />
 						<div className="p-8">
 							<div className="text-6xl">Hé lô,</div>
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 							/>
 							<path d="M187.89-183.35" transform="translate(103.65 245)" fill="#fffffe" />
 						</svg>
-						<div className="fixed bottom-0 left-0 p-4">
+						<div className="flex flex-1 flex-col justify-end p-4">
 							<div className="flex items-center">
 								<svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 1024 1024" className="icon" version="1.1">
 									<path
