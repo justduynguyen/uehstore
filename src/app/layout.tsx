@@ -1,4 +1,5 @@
 import HomePageHead from '@/components/layout/home-page-head';
+import HomePageNotice from '@/components/layout/home-page-notice';
 import Navbar from '@/components/layout/navbar';
 import { NextUIProviders } from '@/components/nextui-providers';
 import type { Metadata } from 'next';
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<Navbar />
 					<Suspense>
 						<div className="flex flex-col justify-center bg-neutral-50">
+							<HomePageNotice />
 							<HomePageHead />
 							<div className="flex max-w-[1240px] p-4">
 								<div className="flex w-full flex-col gap-4 text-black">
