@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang="en" className={pacifico.className}>
 			<body className="h-screen touch-pan-y overflow-auto bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 text-black selection:bg-teal-300">
 				<NextUIProviders>
-					<div className="pb-12">
+					<div className="flex h-screen flex-col pb-12">
 						<Navbar />
 						<div className="p-4 pt-8">
 							<div className="text-6xl">Hé lô,</div>
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 								fill="#fffffe"
 							/>
 						</svg>
-						<div>
+						<div className="flex-1">
 							<HomePageNotice />
 						</div>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 79.54">

@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 export function NextUIProviders({ children }: { children: ReactNode }) {
 	return (
 		<NextUIProvider>
-			<main className="flex h-screen flex-col overflow-auto">{children}</main>
+			<main className="h-screen flex-col overflow-auto">{children}</main>
 		</NextUIProvider>
 	);
 }
