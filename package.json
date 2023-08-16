@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
+		"start": "next start -p 3001",
 		"lint": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next lint",
 		"build:local": "prettier --write . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next build"
 	},
