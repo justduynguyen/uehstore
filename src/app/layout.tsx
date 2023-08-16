@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 		<html lang="en" className={pacifico.className}>
 			<body className="touch-pan-y bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 text-black selection:bg-teal-300">
 				<NextUIProviders>
-					<div className="relative flex h-screen flex-col">
+					<div className="flex h-screen shrink-0 grow-0 flex-col">
 						<Navbar />
 						<div className="p-8">
 							<div className="text-6xl">Hé lô,</div>
@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 							</div>
 						</div>
 					</div>
-					<div className="h-[1000px]">{children}</div>
+					<div className="h-[1000px] bg-gray-100">{children}</div>
 					{/* <Suspense>
 						<div className="flex flex-col justify-center bg-neutral-50">
 							<HomePageNotice />
