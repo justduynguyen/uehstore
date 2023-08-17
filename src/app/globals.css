@@ -1,4 +1,6 @@
 /* stylelint-disable scss/at-rule-no-unknown */
+@import '@unocss/reset/tailwind.css';
+@unocss all;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
