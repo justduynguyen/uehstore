@@ -601,7 +601,7 @@ export default async function HomePage() {
 				/>
 				<path d="M187.89-183.35" transform="translate(103.65 245)" fill="#fffffe" />
 			</svg>
-			<div className="bg-rose-600">
+			<div className="bg-white">
 				<div className="relative h-[1000px] bg-[url('/ooorganize.svg')] bg-contain">
 					{products.length > 0 ? (
 						<Grid className="grid-cols-2 p-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
