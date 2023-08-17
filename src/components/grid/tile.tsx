@@ -38,7 +38,7 @@ export function GridTileImage({
 		// 	) : null}
 		// 	{label ? <Label title={label.title} amount={label.amount} currencyCode={label.currencyCode} position={label.position} /> : null}
 		// </div>
-		<div className="flex h-full w-full flex-col overflow-hidden rounded-lg">
+		<div className="shadow-custom1 flex h-full w-full flex-col overflow-hidden rounded-lg bg-gradient-to-br from-rose-300 to-rose-500">
 			<div className="relative flex-1">
 				<Image
 					className={clsx('rounded-lg object-contain', {
