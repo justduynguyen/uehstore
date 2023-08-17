@@ -15,13 +15,17 @@ export default async function HomePage() {
 
 	return (
 		<div className="">
-			<div className="flex h-[calc(100vh-65px)] flex-col">
-				<div className="flex flex-1 flex-col p-4 pt-8">
-					<div className="text-6xl">Hé lô,</div>
-					<div className="text-3xl">Cảm ơn bạn ghé thăm shop</div>
-					<div className="text-3xl">của chúng mình!</div>
-					<div className="pt-2">
-						<div className="flex items-center">
+			<div className="bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 selection:bg-teal-300">
+				<div className="introduce flex flex-1 flex-col px-6 pb-8 pt-8">
+					<div className="pt-8">
+						<div className="text-6xl">Hé lô,</div>
+						<div className="text-3xl">Cảm ơn bạn ghé thăm shop</div>
+						<div className="text-3xl">của chúng mình!</div>
+					</div>
+					<div className="text-sm text-neutral-600">
+						<div>Đây là dự án mới được khởi chạy, nhầm thỏa mãn niềm đam mê buôn bán của mình ^^!</div>
+						<div>Cũng như là nơi để các bạn sinh viên trong và ngoài trường có thể mua được sản phẩm cần thiết với giá hợp lý nhất!</div>
+						<div className="facebook flex items-center pt-1 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 1024 1024" className="icon" version="1.1">
 								<path
 									d="M629.379072 512.20992h-58.22464l-0.401408 252.105728H466.74944V512.311296h-62.440448v-83.866624h62.440448v-51.3536c0-69.9904 20.98176-116.784128 102.897664-116.784128h63.747072v83.968h-38.148096c-31.721472 0-33.93024 15.39584-33.93024 37.67808l-0.1024 46.288896h77.100032l-8.935424 83.968zM788.31616 98.304H236.306432C160.090112 98.304 98.304 160.090112 98.304 236.306432V788.31616c0 76.21632 61.786112 138.002432 138.002432 138.002432H788.31616c76.21632 0 138.002432-61.785088 138.002432-138.002432V236.306432C926.318592 160.090112 864.53248 98.304 788.31616 98.304z"
@@ -34,7 +38,7 @@ export default async function HomePage() {
 							</svg>
 							<div className="pl-1">https://www.facebook.com/justduynguyen</div>
 						</div>
-						<div className="flex items-center">
+						<div className="zalo__phone flex items-center text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 1024 1024" className="icon" version="1.1">
 								<path
 									d="M590.226432 690.929664c-61.667328 81.299456-91.501568 90.14272-158.25408-0.113664 0.464896 0.347136 0.897024 0.65536 1.355776 0.9984-0.448512-0.461824-0.90112-0.896-1.355776-1.368064 66.277376-76.855296 91.981824-76.845056 158.25408 0.119808-0.59392 0.498688-1.18784 0.965632-1.783808 1.4592 0.594944-0.36864 1.178624-0.72704 1.783808-1.09568m215.40864-238.467072c-14.2848-39.46496-37.920768-77.609984-71.504896-111.33952-17.67936-18.46272-37.557248-34.760704-59.225088-48.453632-39.415808-28.18048-79.940608-54.84032-120.588288-81.267712C511.495168 170.52672 453.71392 145.408 390.068224 145.408c-22.035456 0-43.372544 3.00544-63.634432 8.631296 50.62656 3.47136 96.92672 22.8352 134.019072 53.175296-23.504896-7.79264-48.61952-12.007424-74.714112-12.007424-43.491328 0-84.2752 11.713536-119.405568 32.178176 19.559424-5.219328 40.108032-7.99744 61.294592-7.99744 33.654784 0 65.672192 7.048192 94.716928 19.700736-23.71584 15.683584-47.285248 31.58016-70.509568 47.95392-52.1216 30.46912-94.69952 75.630592-122.200064 129.88928-6.306816 12.511232-11.722752 25.353216-16.326656 38.488064-17.639424 112.66048 7.020544 211.751936 3.545088 221.019136C259.106816 785.097728 362.34752 865.28 478.434304 876.255232a317.952 317.952 0 0 0 29.913088 1.417216c60.71296 0 117.643264-17.649664 165.919744-49.18272 56.7552-35.677184 101.338112-89.15456 126.118912-152.664064-3.330048-9.09824 16.10752-146.893824 5.248-223.363072"
@@ -49,7 +53,7 @@ export default async function HomePage() {
 						</div>
 					</div>
 				</div>
-				<div className="">
+				<div className="pb-20">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 98.79">
 						<path
 							d="M1014.5-213.94V-162H-65.5v-64.39a100,100,0,0,0,35.36,15c56.08,11.43,81.68-37.58,144-35,38.25,1.58,38,20.44,81,21,47,.61,53.77-21.86,92-22,57.2-.22,66.72,50,126,58,46,6.22,58-21.63,122-37,77.87-18.71,87.42,16,180,11,116.57-6.27,160.7-65.92,239-38C982.78-243.07,1002.91-225.66,1014.5-213.94Z"
@@ -68,7 +72,8 @@ export default async function HomePage() {
 					</svg>
 				</div>
 			</div>
-			<div className="h-[10000px] bg-gray-400"></div>
+
+			<div className="h-[1000px]"></div>
 			<div>
 				{products.length > 0 ? (
 					<Grid className="grid-cols-2 p-2 pt-0 sm:grid-cols-2 lg:grid-cols-3">
