@@ -16,8 +16,8 @@ export default async function HomePage() {
 	return (
 		<div className="">
 			<div className="bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 selection:bg-teal-300">
-				<div className="introduce flex flex-1 flex-col px-6 pb-8 pt-8">
-					<div className="pt-8">
+				<div className="introduce flex flex-1 flex-col px-6 pb-12 pt-20">
+					<div className="">
 						<div className="text-6xl">Hé lô,</div>
 						<div className="text-3xl">Cảm ơn bạn ghé thăm shop</div>
 						<div className="text-3xl">của chúng mình!</div>
@@ -53,8 +53,8 @@ export default async function HomePage() {
 						</div>
 					</div>
 				</div>
-				<div className="pb-20">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 98.79">
+				<div className="">
+					<svg className="-mb-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 98.79">
 						<path
 							d="M1014.5-213.94V-162H-65.5v-64.39a100,100,0,0,0,35.36,15c56.08,11.43,81.68-37.58,144-35,38.25,1.58,38,20.44,81,21,47,.61,53.77-21.86,92-22,57.2-.22,66.72,50,126,58,46,6.22,58-21.63,122-37,77.87-18.71,87.42,16,180,11,116.57-6.27,160.7-65.92,239-38C982.78-243.07,1002.91-225.66,1014.5-213.94Z"
 							transform="translate(65.5 260.77)"
@@ -62,18 +62,17 @@ export default async function HomePage() {
 						/>
 					</svg>
 					<HomePageNotice />
-					<svg className="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 80">
-						<path
-							d="M-103.65-202.42V-245h1080v24.71c-43.92,33.3-82.1,45-106.49,49.94-110.78,22.26-221.37-39.2-324.4-30.94-23.65,1.89-48.67,5.44-48.67,5.44-57.36,9.25-68.3,15-88.91,17.5-76.71,9.27-90.89-50.47-159.09-38.5-35.22,6.18-49.92,25.36-92,22-24.74-2-42.21-10.41-48.89-13.35-33.78-14.88-94.27-22.94-211.47,5.78Z"
-							transform="translate(103.65 245)"
-							fill="#fffffe"
-						/>
-						<path d="M187.89-183.35" transform="translate(103.65 245)" fill="#fffffe" />
-					</svg>
 				</div>
 			</div>
-
-			<div className="h-[1000px]"></div>
+			<svg className="-mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 80">
+				<path
+					d="M-103.65-202.42V-245h1080v24.71c-43.92,33.3-82.1,45-106.49,49.94-110.78,22.26-221.37-39.2-324.4-30.94-23.65,1.89-48.67,5.44-48.67,5.44-57.36,9.25-68.3,15-88.91,17.5-76.71,9.27-90.89-50.47-159.09-38.5-35.22,6.18-49.92,25.36-92,22-24.74-2-42.21-10.41-48.89-13.35-33.78-14.88-94.27-22.94-211.47,5.78Z"
+					transform="translate(103.65 245)"
+					fill="#fffffe"
+				/>
+				<path d="M187.89-183.35" transform="translate(103.65 245)" fill="#fffffe" />
+			</svg>
+			{/* <div className="relative h-[1000px] bg-[url('test1.png')]"></div> */}
 			<div>
 				{products.length > 0 ? (
 					<Grid className="grid-cols-2 p-2 pt-0 sm:grid-cols-2 lg:grid-cols-3">
