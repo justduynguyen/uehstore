@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html className="font-pacifo">
-			<body className="touch-pan-y overflow-auto text-black">
+			<body className="touch-pan-y overflow-auto bg-white text-black">
 				<NextUIProviders>
 					<Navbar />
 					{children}
