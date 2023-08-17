@@ -16,7 +16,7 @@ export default async function HomePage() {
 	return (
 		<div className="">
 			<div className="bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 selection:bg-teal-300">
-				<div className="introduce flex flex-1 flex-col px-6 pb-12 pt-20">
+				<div className="introduce flex flex-1 flex-col px-6 pb-8 pt-20">
 					<div className="">
 						<div className="text-6xl">Hé lô,</div>
 						<div className="text-3xl">Cảm ơn bạn ghé thăm shop</div>
@@ -25,7 +25,7 @@ export default async function HomePage() {
 					<div className="text-sm text-neutral-600">
 						<div>Đây là dự án mới được khởi chạy, nhầm thỏa mãn niềm đam mê buôn bán của mình ^^!</div>
 						<div>Cũng như là nơi để các bạn sinh viên trong và ngoài trường có thể mua được sản phẩm cần thiết với giá hợp lý nhất!</div>
-						<div className="facebook flex items-center pt-1 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+						<div className="facebook flex items-center pt-4 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 							<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 1024 1024" className="icon" version="1.1">
 								<path
 									d="M629.379072 512.20992h-58.22464l-0.401408 252.105728H466.74944V512.311296h-62.440448v-83.866624h62.440448v-51.3536c0-69.9904 20.98176-116.784128 102.897664-116.784128h63.747072v83.968h-38.148096c-31.721472 0-33.93024 15.39584-33.93024 37.67808l-0.1024 46.288896h77.100032l-8.935424 83.968zM788.31616 98.304H236.306432C160.090112 98.304 98.304 160.090112 98.304 236.306432V788.31616c0 76.21632 61.786112 138.002432 138.002432 138.002432H788.31616c76.21632 0 138.002432-61.785088 138.002432-138.002432V236.306432C926.318592 160.090112 864.53248 98.304 788.31616 98.304z"
@@ -72,10 +72,9 @@ export default async function HomePage() {
 				/>
 				<path d="M187.89-183.35" transform="translate(103.65 245)" fill="#fffffe" />
 			</svg>
-			{/* <div className="relative h-[1000px] bg-[url('test1.png')]"></div> */}
-			<div>
+			<div className="relative h-[1000px] bg-[url('/ooorganize.svg')] bg-contain">
 				{products.length > 0 ? (
-					<Grid className="grid-cols-2 p-2 pt-0 sm:grid-cols-2 lg:grid-cols-3">
+					<Grid className="grid-cols-2 p-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
 						<ProductGridItems products={products} />
 					</Grid>
 				) : null}
