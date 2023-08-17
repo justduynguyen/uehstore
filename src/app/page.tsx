@@ -594,21 +594,24 @@ export default async function HomePage() {
 				</div>
 			</div>
 			{/* <div className="bg-white"> */}
-			<div className="relative h-[1000px] bg-[url('/ooorganize1.svg')] bg-contain">
-				<svg className="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 80">
-					<path
-						d="M-103.65-202.42V-245h1080v24.71c-43.92,33.3-82.1,45-106.49,49.94-110.78,22.26-221.37-39.2-324.4-30.94-23.65,1.89-48.67,5.44-48.67,5.44-57.36,9.25-68.3,15-88.91,17.5-76.71,9.27-90.89-50.47-159.09-38.5-35.22,6.18-49.92,25.36-92,22-24.74-2-42.21-10.41-48.89-13.35-33.78-14.88-94.27-22.94-211.47,5.78Z"
-						transform="translate(103.65 245)"
-						fill="#fffffe"
-					/>
-					<path d="M187.89-183.35" transform="translate(103.65 245)" fill="#fffffe" />
-				</svg>
-				{products.length > 0 ? (
-					<Grid className="grid-cols-2 p-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
-						<ProductGridItems products={products} />
-					</Grid>
-				) : null}
+			<div className="bg-white">
+				<div className="relative h-[1000px] bg-[url('/ooorganize1.svg')] bg-contain">
+					<svg className="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 80">
+						<path
+							d="M-103.65-202.42V-245h1080v24.71c-43.92,33.3-82.1,45-106.49,49.94-110.78,22.26-221.37-39.2-324.4-30.94-23.65,1.89-48.67,5.44-48.67,5.44-57.36,9.25-68.3,15-88.91,17.5-76.71,9.27-90.89-50.47-159.09-38.5-35.22,6.18-49.92,25.36-92,22-24.74-2-42.21-10.41-48.89-13.35-33.78-14.88-94.27-22.94-211.47,5.78Z"
+							transform="translate(103.65 245)"
+							fill="#fffffe"
+						/>
+						<path d="M187.89-183.35" transform="translate(103.65 245)" fill="#fffffe" />
+					</svg>
+					{products.length > 0 ? (
+						<Grid className="grid-cols-2 p-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
+							<ProductGridItems products={products} />
+						</Grid>
+					) : null}
+				</div>
 			</div>
+
 			{/* </div> */}
 		</div>
 	);
