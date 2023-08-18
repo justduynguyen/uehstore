@@ -55,7 +55,7 @@ export default async function HomePage() {
 						</div>
 					</div>
 				</div>
-				<div className="">
+				<div className="w-screen">
 					<Image src={topsvg} alt="top.svg" className="w-screen object-fill" />
 					<HomePageNotice />
 				</div>
