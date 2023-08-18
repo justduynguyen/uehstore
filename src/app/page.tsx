@@ -1,9 +1,6 @@
 import Grid from '@/components/grid';
 import HomePageNotice from '@/components/layout/home-page-notice';
 import ProductGridItems from '@/components/layout/product-grid-items';
-import botsvg from '@/public/bottom.svg';
-import topsvg from '@/public/top.svg';
-import Image from 'next/image';
 
 export const runtime = 'edge';
 
@@ -56,14 +53,16 @@ export default async function HomePage() {
 					</div>
 				</div>
 				<div className="w-screen">
-					<Image src={topsvg} alt="top.svg" className="w-screen scale-x-125 object-fill" />
+					<div className="h-[50px] bg-[url('/top.svg')] bg-auto"></div>
+					{/* <Image src={topsvg} alt="top.svg" className="w-screen scale-x-125 object-fill" /> */}
 					<HomePageNotice />
 				</div>
 			</div>
 			{/* <div className="bg-white"> */}
 			<div className="bg-gradient-to-r from-rose-100 to-teal-100">
 				<div className="h-[1000px] bg-[url('/ooorganize2.svg')] bg-contain">
-					<Image src={botsvg} alt="bottom.svg" className="-mt-2 w-screen" />
+					<div className="h-[50px] bg-[url('/bottom.svg')]  bg-auto"></div>
+					{/* <Image src={botsvg} alt="bottom.svg" className="-mt-2 w-screen" /> */}
 					{products.length > 0 ? (
 						<Grid className="grid-cols-2 p-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
 							<ProductGridItems products={products} />
