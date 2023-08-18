@@ -56,14 +56,14 @@ export default async function HomePage() {
 					</div>
 				</div>
 				<div className="">
-					<Image src={topsvg} alt="top.svg" />
+					<Image src={topsvg} alt="top.svg" className="w-full" />
 					<HomePageNotice />
 				</div>
 			</div>
 			{/* <div className="bg-white"> */}
 			<div className="bg-gradient-to-r from-rose-100 to-teal-100">
 				<div className="h-[1000px] bg-[url('/ooorganize2.svg')] bg-contain">
-					<Image src={botsvg} alt="bottom.svg" className="-mt-2" />
+					<Image src={botsvg} alt="bottom.svg" className="-mt-2 w-full" />
 					{products.length > 0 ? (
 						<Grid className="grid-cols-2 p-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
 							<ProductGridItems products={products} />

@@ -51,10 +51,10 @@ export function GridTileImage({
 				</div>
 			</div>
 
-			<div className="font-comfortaa text bg-white p-2  font-semibold">
-				<div className="product__name line-clamp-2 w-full  tracking-tight">Sản phẩm số 1 thị trường</div>
+			<div className="font-comfortaa text bg-white p-2">
+				<div className="product__name line-clamp-2 w-full text-sm font-medium">Sản phẩm số 1 thị trường</div>
 				<div className="flex h-8 flex-row items-end justify-between">
-					<div className="product__price inline-block rounded-full align-bottom tracking-tight">1.000.000đ</div>
+					<div className="product__price inline-block rounded-full align-bottom font-semibold tracking-tight">1.000.000đ</div>
 					<div className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-500">+</div>
 				</div>
 			</div>
