@@ -10,6 +10,7 @@ export default defineConfig({
 				mali: 'Mali',
 				bungee: 'Major Mono Display',
 				pacifo: 'Pacifico',
+				comfortaa: 'Comfortaa',
 			},
 		}),
 		// ...

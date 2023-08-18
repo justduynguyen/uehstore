@@ -3,7 +3,7 @@ import { ComponentProps } from 'react';
 
 function Grid(props: ComponentProps<'ul'>) {
 	return (
-		<ul {...props} className={clsx('grid grid-flow-row gap-x-8 gap-y-8', props.className)}>
+		<ul {...props} className={clsx('grid grid-flow-row gap-4 px-4', props.className)}>
 			{props.children}
 		</ul>
 	);
