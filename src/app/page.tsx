@@ -16,8 +16,8 @@ export default async function HomePage() {
 	const products = [1, 2, 3]; //await getProducts({ sortKey, reverse, query: searchValue });
 
 	return (
-		<div className="">
-			<div className="bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 selection:bg-teal-300">
+		<div className=" w-screen">
+			<div className="w-screen bg-gradient-to-b from-yellow-200 via-pink-200 to-rose-500 selection:bg-teal-300">
 				<div className="introduce relative flex flex-1 flex-col px-6 pb-8 pt-20">
 					<div className="z-10">
 						<div className="text-6xl">Hé lô,</div>
